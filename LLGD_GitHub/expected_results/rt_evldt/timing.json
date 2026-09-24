@@ -1,0 +1,35 @@
+[
+  {
+    "Sequence": "urban",
+    "Frames": 130,
+    "MeanEvents": 9884.461538461539,
+    "MaxFrameLag": 0.0016533343333335893,
+    "RTMeanStepSeconds": 0.0022205242143333334,
+    "RTP95StepSeconds": 0.0029267735499999975,
+    "RTWallSeconds": 6.661572643,
+    "LLGDMeanSeconds": 0.9100118607692308,
+    "LLGDStdSeconds": 0.9986090125314162
+  },
+  {
+    "Sequence": "office_spiral",
+    "Frames": 113,
+    "MeanEvents": 11119.079646017699,
+    "MaxFrameLag": 0.0016639999999998878,
+    "RTMeanStepSeconds": 0.0021941221333333333,
+    "RTP95StepSeconds": 0.0028295482499999997,
+    "RTWallSeconds": 6.5823664,
+    "LLGDMeanSeconds": 1.5797006663716813,
+    "LLGDStdSeconds": 1.6063422949096857
+  },
+  {
+    "Sequence": "hqf_boxes",
+    "Frames": 105,
+    "MeanEvents": 11110.142857142857,
+    "MaxFrameLag": 0.001646666666665908,
+    "RTMeanStepSeconds": 0.002687606696666666,
+    "RTP95StepSeconds": 0.0036640860499999903,
+    "RTWallSeconds": 8.062820089999999,
+    "LLGDMeanSeconds": 1.1241479866666666,
+    "LLGDStdSeconds": 0.5934307830060993
+  }
+]
