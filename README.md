@@ -1,14 +1,25 @@
 # The line-based local-to-global detection method for event cameras
 
 **Abstract**:
-Event cameras inherently respond to the contour information of moving objects. Given that structured environments are typically rich in line-based geometric features, detecting line segments from sparse event streams is a crucial task.
-Existing event-based line detection methods generally aggregate events with similar characteristics to estimate segments, but they often struggle when multiple lines intersect and are limited in filtering noisy events.
-To address these issues, this paper proposes a line-based local-to-global detection (LLGD) method, which first distinguishes multiple lines locally and then globally expands the set of inlier events belonging to locally detected segments.
-Specifically, for a given event, the local module estimates the segment with the highest number of inliers within its neighborhood, handling most single-line cases robustly. When two lines are connected, a two-step verification process is applied, followed by clustering and adaptive denoising to differentiate them. Subsequently, plane fitting in the global spatio-temporal space is employed to further extend the inlier event set for each segment.
-Comparative experiments with existing line detection methods across various geometric shapes demonstrate the effectiveness of the proposed method. The implementation code is open-sourced to the community to support further research.
+Event cameras report asynchronous brightness changes, and moving edges form line-like structures within short
+spatio-temporal windows. Line segments are common geometric
+features in structured environments, but separating two lines
+that share a local neighborhood while rejecting geometrically
+unsupported events remains difficult. This paper presents a linebased
+local-to-global detection (LLGD) method that fits up to two
+local line models and then expands their inlier events globally.
+The local module combines pixel-multiplicity-weighted random sample consensus (RANSAC) with weighted total least
+squares. If the one-line support tests fail, eligible neighborhoods
+are partitioned into two clusters, and the fitted lines are verified
+with an unscaled median absolute deviation (MAD) score. The global module expands each accepted inlier set on
+its spatio-temporal plane. We evaluate 30 packets from each of four sequences in two public datasets, using acquisition
+windows of up to 20 ms. Mean F1, the harmonic mean of
+event-support precision and recall, ranges from 0.301 to 0.627 against frame-derived references, with scene-dependent
+performance relative to the comparison methods. Global expansion improves coverage and reduces fragmentation; the
+precision benefit of local verification depends on the scene. Comparisons with recent detectors
+show limitations in endpoint localization and line coverage. The current MATLAB implementation has per-sequence mean
+processing times of 0.125–1.163 s per packet.
 
-## Run
-Coming soon
 
 ## Citations
 If you find this work useful for you, please cite:
