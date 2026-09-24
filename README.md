@@ -21,5 +21,8 @@ show limitations in endpoint localization and line coverage. The current MATLAB 
 processing times of 0.125–1.163 s per packet.
 
 
+## Code and example
+The code and experiment instructions are in the LLGD_GitHub folder.
+
 ## Citations
 If you find this work useful for you, please cite:
